@@ -1,11 +1,11 @@
 zips = {
-    'query_objectid_as_string': True,
     'schema': {
         'city': {
             'type': 'string',
+            'unique': True
         },
         'loc': {
-            'type': 'integer',
+            'type': 'list',
         },
         'state': {
             'type': 'string',
@@ -15,7 +15,7 @@ zips = {
             'type': 'string',
         },
         'pop': {
-            'type': 'string',
+            'type': 'integer',
         }
     },
     'resource_methods': ['GET'],
@@ -31,7 +31,6 @@ for key in zips_schema.keys():
 
 admin_zips = {
     'url': '_admin/zips',
-    'query_objectid_as_string': True,
     'datasource': {
         'source': 'accounts',
     },

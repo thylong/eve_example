@@ -19,7 +19,9 @@ RUN        useradd uwsgi -s /bin/false
 COPY       eve_example /var/app/eve_example
 COPY       application.py /var/app/
 COPY       requirements.txt /var/app/
+COPY       requirements-dev.txt /var/app/
 RUN        if [ -f /var/app/requirements.txt ]; then /usr/local/bin/pip install -r /var/app/requirements.txt; fi
+RUN        if [ -f /var/app/requirements-dev.txt ]; then /usr/local/bin/pip install -r /var/app/requirements-dev.txt; fi
 
 ENV        UWSGI_NUM_PROCESSES    1
 ENV        UWSGI_NUM_THREADS      50

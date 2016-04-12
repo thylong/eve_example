@@ -1,0 +1,4 @@
+[run]
+omit =
+    eve_example/test_*
+    eve_example/tests/test_*
