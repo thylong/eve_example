@@ -1,0 +1,10 @@
+mongo:
+    image: mongo:3.0.10
+eve_example:
+    build: .
+    ports:
+        - "80:8080"
+    volumes:
+        - .:/var/app
+    links:
+        - mongo
