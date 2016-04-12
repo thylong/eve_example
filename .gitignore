@@ -1,0 +1,16 @@
+*.pyc
+*.egg*/
+*~
+.tox/*
+venv/
+vm/
+src/
+dump/
+local/
+.coverage
+.ropeproject
+.cache
+*.DS_Store*
+
+# Yelp pre-commit hooks
+.pre-commit-config.yaml
