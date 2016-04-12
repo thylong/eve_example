@@ -1,5 +1,5 @@
 import os
-from .zips.domain import zips
+from .zips.domain import zips, admin_zips
 
 DEFAULT_SETTINGS = {
     'SERVICE_NAME': 'eve_example',
@@ -8,6 +8,7 @@ DEFAULT_SETTINGS = {
     'MONGO_URI': os.getenv('MONGO_URI', 'mongodb://mongo:27017/eve_example'),
 
     'DOMAIN': {
-        'zips': zips
+        'zips': zips,
+        'admin_zips': admin_zips
     }
 }
